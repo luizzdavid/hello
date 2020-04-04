@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+
+        public static void main(String[] args) {
+            Instrument gtr = new Instrument("squier",1200.00);
+            Instrument mic = new Instrument("shure",570);
+            Instrument drum = new Instrument("dw",3000.89);
+            List<Instrument> ptInstruments = new ArrayList<Instrument>();
+            Person voc= new Person("sw","london","0183746");
+            Person gtr1= new Person("john","manchester","018373236");
+            Person drummer= new Person("gavinh","liverpool","0183qw746");
+            Person bass= new Person("coline","norwich","0183746");
+            List<Person> ptmem = new ArrayList<>();
+            ptmem.add(voc);
+            ptmem.add(gtr1);
+
+           System.out.println(ptmem);
+
+
+        }
+    }
+
+
+class Person {
+    public String name;
+    public String address;
+    public String phoneNo;
+    public Person(String name, String address, String phoneNo) {
+        this.name = name;
+        this.address = address;
+        this.phoneNo = phoneNo;
+    }
+}
+
+
+public class Instrument {
+    public String name;
+    public double price;
+
+    public Instrument(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+}
+
+
+import java.util.List;
+
+public class Band {
+
+    String bandName;
+    List<Person> persons;
+    List<Instrument> instrument;
+
+    public Band(String bandName , List<Person> persons, List<Instrument> instrument) {
+        this.bandName = bandName;
+        this.persons=persons;
+        this.instrument=instrument;
+
+    }
+}
